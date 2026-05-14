@@ -1,36 +1,45 @@
-# 🌎 Smart IoT Dashboard
+## 📸 Dashboard Preview
 
-A modern real-time Smart IoT Monitoring Dashboard built using Python Shiny.
+# ☀️ Light Mode
 
-## 🚀 Features
+### Dashboard Top
 
-- 🌡️ Live Temperature Monitoring
-- 💧 Live Humidity Monitoring
-- 📈 Real-Time Graphs
-- 🌦️ Weather Prediction
-- 🚨 Smart Alerts System
-- 📊 Analytics Dashboard
-- 🌙 Dark Mode Support
-- 📍 Multi-Location Monitoring
-- 📥 Excel Report Export
-- 🟢 Sensor Status Monitoring
+![Light Top](screenshots/light-top.png)
 
-## 🛠️ Tech Stack
+---
 
-- Python
-- Shiny for Python
-- Matplotlib
-- Pandas
-- OpenPyXL
-- CSS
+### Dashboard Middle
 
-## ▶️ Run Project
+![Light Middle](screenshots/light-middle.png)
 
-```bash
-pip install -r requirements.txt
-python -m shiny run --reload app.py
-```
+---
 
-## 👨‍💻 Author
+### Dashboard Bottom
 
-Balla Satya
+![Light Bottom](screenshots/light-bottom.png)
+
+---
+
+# 🌙 Dark Mode
+
+### Dashboard Top
+
+![Dark Top](screenshots/dark-top.png)
+
+---
+
+### Dashboard Middle
+
+![Dark Middle](screenshots/dark-middle.png)
+
+---
+
+### Dashboard Bottom
+
+![Dark Bottom](screenshots/dark-bottom.png)
+
+---
+
+# 📥 Excel Report Export
+
+![Excel Report](screenshots/excel-report.png)
