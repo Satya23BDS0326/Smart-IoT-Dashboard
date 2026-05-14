@@ -1,0 +1,196 @@
+body {
+    background-color: #f5f7fa;
+    color: #111111;
+    font-family: 'Segoe UI', sans-serif;
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease;
+    padding: 20px 30px;
+}
+
+/* ---------- DARK MODE ---------- */
+
+body.dark-mode {
+    background-color: #0f172a !important;
+    color: #ffffff !important;
+}
+
+/* All Text */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode label,
+body.dark-mode li {
+
+    color: #ffffff !important;
+}
+
+/* Cards */
+
+body.dark-mode .card {
+
+    background-color: #1e293b !important;
+
+    border: 1px solid #334155 !important;
+
+    color: #ffffff !important;
+
+    box-shadow:
+        0 4px 20px rgba(0,0,0,0.25) !important;
+}
+
+/* Inputs */
+
+body.dark-mode select {
+
+    background-color: #1e293b !important;
+
+    color: #ffffff !important;
+
+    border: 1px solid #334155 !important;
+}
+
+/* Download Button */
+
+body.dark-mode button {
+
+    background-color: #1e293b !important;
+
+    color: #ffffff !important;
+
+    border: 1px solid #334155 !important;
+}
+
+/* Theme Toggle */
+
+body.dark-mode .theme-toggle-btn {
+
+    background-color: #1e293b !important;
+
+    color: #ffffff !important;
+
+    border: 1px solid #334155 !important;
+}
+
+/* Sensor Panel */
+
+body.dark-mode .sensor-panel {
+
+    background-color: #1e293b !important;
+
+    border: 1px solid #334155 !important;
+
+    color: #ffffff !important;
+}
+
+/* Horizontal Lines */
+
+body.dark-mode hr {
+
+    border-color: #334155 !important;
+}
+
+/* ---------- TOP BAR ---------- */
+
+.top-bar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+/* ---------- THEME BUTTON ---------- */
+
+.theme-toggle-btn {
+
+    position: fixed;
+
+    top: 20px;
+
+    right: 24px;
+
+    z-index: 9999;
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 50% !important;
+
+    border: none !important;
+
+    font-size: 22px !important;
+
+    cursor: pointer;
+
+    background: #ffffff !important;
+
+    box-shadow:
+        0 2px 10px rgba(0,0,0,0.18);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+
+    transform: scale(1.08);
+}
+
+/* ---------- CARD ---------- */
+
+.card {
+
+    border-radius: 16px !important;
+
+    padding: 20px !important;
+
+    transition: all 0.3s ease;
+
+    background-color: #ffffff;
+
+    box-shadow:
+        0 2px 10px rgba(0,0,0,0.06) !important;
+}
+
+.card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 24px rgba(0,0,0,0.12) !important;
+}
+
+/* ---------- SCROLLBAR ---------- */
+
+::-webkit-scrollbar {
+
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+
+    background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #475569;
+
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #64748b;
+}
