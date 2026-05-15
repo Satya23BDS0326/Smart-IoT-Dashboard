@@ -10,10 +10,18 @@ def location_selector():
             "location",
             "Select Location",
             {
-                "Vijayawada": "Vijayawada",
+                
+                "Pune": "Pune",
                 "Hyderabad": "Hyderabad",
+                "Bengaluru": "Bengaluru",
                 "Chennai": "Chennai",
-                "Bangalore": "Bangalore"
+                "Mumbai": "Mumbai",
+                "Delhi": "Delhi",
+                "Kolkata": "Kolkata",
+                "Ahmedabad": "Ahmedabad",
+                "Guwahati": "Guwahati",
+                "Jaipur": "Jaipur"
+            
             }
         ),
 
