@@ -12,10 +12,16 @@ from analytics.stats import calculate_stats
 
 
 locations = {
-    "Vijayawada": {"temp": (30, 42), "humidity": (55, 85)},
-    "Hyderabad": {"temp": (25, 38), "humidity": (40, 70)},
-    "Chennai": {"temp": (28, 40), "humidity": (60, 90)},
-    "Bangalore": {"temp": (20, 32), "humidity": (35, 65)},
+    "Pune": {"temp": (27, 32), "humidity": (60, 75)},
+    "Hyderabad": {"temp": (30, 38), "humidity": (45, 65)},
+    "Bengaluru": {"temp": (22, 29), "humidity": (60, 78)},
+    "Chennai": {"temp": (32, 39), "humidity": (65, 85)},
+    "Mumbai": {"temp": (28, 34), "humidity": (70, 90)},
+    "Delhi": {"temp": (34, 42), "humidity": (35, 55)},
+    "Kolkata": {"temp": (30, 37), "humidity": (65, 85)},
+    "Ahmedabad": {"temp": (33, 41), "humidity": (35, 55)},
+    "Guwahati": {"temp": (24, 31), "humidity": (70, 90)},
+    "Jaipur": {"temp": (32, 40), "humidity": (30, 50)},
 }
 
 
@@ -38,7 +44,7 @@ def make_history(location):
 
 
 initial_temp, initial_humidity = make_history(
-    "Vijayawada"
+    "Pune"
 )
 
 
@@ -123,7 +129,7 @@ app_ui = ui.page_fluid(
 
     ui.hr(),
 
-    ui.h2("🌦️ Weather Prediction"),
+    ui.h2("🌡️ Environmental Conditions"),
     ui.output_text("weather_status"),
 
     ui.hr(),
@@ -165,7 +171,7 @@ def server(input, output, session):
     dark_mode = reactive.value(False)
 
     previous_location = reactive.value(
-        "Vijayawada"
+        "Pune"
     )
 
     temp_history = reactive.value(
@@ -389,18 +395,19 @@ def server(input, output, session):
 
         data = sensor_values.get()
 
-        weather = weather_condition(
-            data["temp"],
-            data["humidity"]
-        )
+        if data["temp"] >= 38:
+            weather = "High Temperature Conditions"
 
-        return (
-            weather
-            .replace("🔥 ", "")
-            .replace("🌧️ ", "")
-            .replace("🌫️ ", "")
-            .replace("☀️ ", "")
-        )
+        elif data["temp"] >= 30:
+            weather = "Warm & Dry Conditions"
+
+        elif data["temp"] >= 24:
+            weather = "Moderate Conditions"
+
+        else:
+            weather = "Cool & Humid Conditions"
+
+        return weather
 
     @output
     @render.ui
@@ -528,18 +535,17 @@ def server(input, output, session):
 
         data = sensor_values.get()
 
-        weather = weather_condition(
-            data["temp"],
-            data["humidity"]
-        )
+        if data["temp"] >= 38:
+            weather = "High Temperature Conditions"
 
-        weather = (
-            weather
-            .replace("🔥 ", "")
-            .replace("🌧️ ", "")
-            .replace("🌫️ ", "")
-            .replace("☀️ ", "")
-        )
+        elif data["temp"] >= 30:
+            weather = "Warm & Dry Conditions"
+
+        elif data["temp"] >= 24:
+            weather = "Moderate Conditions"
+
+        else:
+            weather = "Cool & Humid Conditions"
 
         alerts_list = check_alerts(
             data["temp"],
@@ -572,7 +578,7 @@ def server(input, output, session):
                 data["humidity"]
             ],
 
-            "Weather Prediction": [
+            "Environmental Conditions": [
                 weather
             ],
 
